@@ -11,10 +11,10 @@ from keras.callbacks import EarlyStopping, ReduceLROnPlateau, ModelCheckpoint
 from keras.layers import GlobalAveragePooling3D
 
 # data loading
-X = np.load('E:\\log-wind\\log_wind_samples_newnonoise1000.npy')  # shape=(1000,100,100,100,3)
+X = np.load('E:\\log-wind\\log_wind_samples1000.npy')  # shape=(1000,100,100,100,3)
 X = X[:,::2,::2,:,:]  # shape = (1000,50,50,100,3)
 print(X.shape)
-y_params = np.load('E:\\log-wind\\log_wind_param_newnonoise1000.npy')   # shape=(1000,4)
+y_params = np.load('E:\\log-wind\\log_wind_param1000.npy')   # shape=(1000,4)
 
 # split data into training and validation sets
 X_train, X_val, y_params_train, y_params_val = train_test_split(
