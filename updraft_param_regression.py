@@ -11,8 +11,7 @@ from keras.callbacks import EarlyStopping, ReduceLROnPlateau, ModelCheckpoint
 from keras.layers import GlobalAveragePooling3D
 
 # data loading
-X = np.load('E:\\updraft\\updraft_wind_samples1000.npy')  # shape=(1000,100,100,200,3)
-X = X[:, ::2, ::2, ::2, :] # shape = (1000,50,50,100,3)
+X = np.load('E:\\updraft\\updraft_wind_samples1000.npy')  # shape=(1000,100,100,100,3)
 print(X.shape)
 y_params = np.load('E:\\updraft\\updraft_wind_param1000.npy')  # shape=(1000,4)
 
